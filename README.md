@@ -1,1 +1,1 @@
-# boilerplate-api
+# @ppl/boilerplate-api
