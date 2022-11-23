@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/2ppl/boilerplate-api/compare/v1.0.0...v1.0.1) (2022-11-23)
+
+
+### Bug Fixes
+
+* remove sr and switch to gh action ([e8f6efb](https://github.com/2ppl/boilerplate-api/commit/e8f6efbc93d172e390b0558f51cb441d6b59dfb1))
+
 # 1.0.0 (2022-11-23)
 
 
