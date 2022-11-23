@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/2ppl/boilerplate-api/compare/v1.0.1...v1.1.0) (2022-11-23)
+
+
+### Features
+
+* add docker build ([2e0a2cc](https://github.com/2ppl/boilerplate-api/commit/2e0a2cc96c8eef508064be831bb8efbd08bcfc9e))
+
 ## [1.0.1](https://github.com/2ppl/boilerplate-api/compare/v1.0.0...v1.0.1) (2022-11-23)
 
 
