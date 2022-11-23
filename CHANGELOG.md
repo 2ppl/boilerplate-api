@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/2ppl/boilerplate-api/compare/v1.1.0...v1.1.1) (2022-11-23)
+
+
+### Bug Fixes
+
+* do changes for up version ([dd50c66](https://github.com/2ppl/boilerplate-api/commit/dd50c669a00a932b70cea22fc5931b504a1bd8b1))
+
 # [1.1.0](https://github.com/2ppl/boilerplate-api/compare/v1.0.1...v1.1.0) (2022-11-23)
 
 
