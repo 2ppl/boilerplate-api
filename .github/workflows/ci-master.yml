@@ -43,13 +43,14 @@ jobs:
         run: yarn
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Release
-        run: npx semantic-release
+#      - name: Release
+#        run: npx semantic-release
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release cycjimmy
+        uses: cycjimmy/semantic-release-action@v3
+        id: semantic
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
         run: yarn build
-#      - name: Publish
-#        run: yarn publish
-#        env:
-#          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

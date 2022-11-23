@@ -10,7 +10,7 @@ function getPlugins() {
       ['@semantic-release/npm', { npmPublish: false }],
       ['@semantic-release/git', {
         assets: ['CHANGELOG.md', 'package.json'],
-        message: '${nextRelease.version} CHANGELOG [skip ci]\n\n${nextRelease.notes}',
+        message: '[AUTO] ${nextRelease.version} CHANGELOG [skip ci]\n\n${nextRelease.notes}',
       }],
       '@semantic-release/github',
     ];
@@ -22,7 +22,7 @@ function getPlugins() {
     ['@semantic-release/npm', { npmPublish: false }],
     ['@semantic-release/git', {
       assets: ['package.json'],
-      message: '${nextRelease.version} CHANGELOG [skip ci]\n\n${nextRelease.notes}',
+      message: '[AUTO] ${nextRelease.version} UP [skip ci]\n\n${nextRelease.notes}',
     }],
     '@semantic-release/github',
   ];
