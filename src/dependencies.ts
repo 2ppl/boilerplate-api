@@ -6,7 +6,6 @@ import * as User from '~/user';
 
 export function registerDependencies(): void {
   // SINGLETON
-  registerDependency('PAGE_REPOSITORY', Page.createRepository);
   registerDependency('USER_REPOSITORY', User.createRepository);
   registerDependency('SESSION_REPOSITORY', Session.createRepository);
   // FACTORY

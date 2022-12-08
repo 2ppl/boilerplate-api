@@ -1,11 +1,12 @@
-import Fastify, { FastifyInstance, FastifyRequest } from 'fastify';
+import Fastify, { FastifyInstance } from 'fastify';
 import qs from 'qs';
-import { getRequestBearer } from '@2ppl/server/api';
+import Knex from 'knex';
+import { Model } from 'objection';
+import { App } from '@2ppl/server/app';
 import { Session } from '@2ppl/boilerplate-schema';
-import { apiPlugin } from '~/api.plugin';
 import { config } from '~/config';
 import { registerDependencies } from '~/dependencies';
-import { useSessionService } from '~/session';
+import * as Api from '~/api';
 
 declare module 'fastify' {
   export interface FastifyRequest {
@@ -20,25 +21,35 @@ const fastify: FastifyInstance = Fastify({
   querystringParser: (str) => qs.parse(str),
 });
 
-async function start(): Promise<void> {
-  const sessionService = useSessionService();
+const knex = Knex({
+  client: 'pg',
+  useNullAsDefault: true,
+  connection: config.PG_CONNECTION,
+});
 
-  fastify.addHook('preParsing', async (request: FastifyRequest) => {
-    request.bearerToken = getRequestBearer(request);
-    if (request.bearerToken) {
-      request.currentSession = await sessionService.findActiveSession(request.bearerToken);
-    }
+Model.knex(knex);
+
+async function start(): Promise<void> {
+  // fastify.addHook('preParsing', async (request: FastifyRequest) => {
+  //   request.bearerToken = getRequestBearer(request);
+  //   if (request.bearerToken) {
+  //     request.currentSession = await sessionService.findActiveSession(request.bearerToken);
+  //   }
+  // });
+
+  const app = new App({
+    fastify,
+    knex,
+    modules: [
+      Api.module,
+    ],
   });
 
-  fastify.register(apiPlugin, { prefix: '/api' });
+  await app.init();
 
-  await fastify.listen({ port: Number(config.PORT) });
-
-  const address = fastify.server.address();
-  const port = typeof address === 'string' ? address : address?.port;
-
-  console.log('address >>>', address);
-  console.log('port >>>', port);
+  await app.start({
+    port: Number(config.PORT),
+  });
 }
 
 start()

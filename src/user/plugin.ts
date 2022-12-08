@@ -7,6 +7,6 @@ export async function plugin(fastifyInstance: FastifyInstance) {
   registerCrudRoutes({
     fastifyInstance,
     crudSchema: User.entityCrudSchema,
-    useCrudFastifyService: useUserService,
+    crudService: useUserService(),
   });
 }

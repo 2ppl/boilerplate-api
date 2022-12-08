@@ -3,6 +3,8 @@ import { Auth } from '@2ppl/boilerplate-schema';
 import { useAuthService } from './di';
 
 export async function plugin(fastifyInstance: FastifyInstance) {
+  const service = useAuthService();
+
   fastifyInstance.route({
     method: Auth.apiConfig.login.method as any,
     url: Auth.apiConfig.login.url,
@@ -12,13 +14,9 @@ export async function plugin(fastifyInstance: FastifyInstance) {
         200: Auth.result,
       },
     },
-    handler: (request: FastifyRequest) => {
-      const service = useAuthService();
-      service.setRequest(request);
-      return service.login(
-        request.body as Auth.Login,
-      );
-    },
+    handler: (request: FastifyRequest) => service.login(
+      request.body as Auth.Login,
+    ),
   });
 
   fastifyInstance.route({
@@ -30,12 +28,8 @@ export async function plugin(fastifyInstance: FastifyInstance) {
         200: Auth.result,
       },
     },
-    handler: (request: FastifyRequest) => {
-      const service = useAuthService();
-      service.setRequest(request);
-      return service.refresh(
-        request.body as Auth.Refresh,
-      );
-    },
+    handler: (request: FastifyRequest) => service.refresh(
+      request.body as Auth.Refresh,
+    ),
   });
 }
