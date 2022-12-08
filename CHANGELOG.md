@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/2ppl/boilerplate-api/compare/v1.1.1...v1.2.0) (2022-12-08)
+
+
+### Bug Fixes
+
+* add external libs in build config ([e99b9ee](https://github.com/2ppl/boilerplate-api/commit/e99b9ee7a8e89b0be4a98bcbdd764498d1a9dd30))
+
+
+### Features
+
+* add db support BREAKING CHANGE: refactor ([db269a5](https://github.com/2ppl/boilerplate-api/commit/db269a52456e00292070ad5b4ca045361776b07d))
+
 ## [1.1.1](https://github.com/2ppl/boilerplate-api/compare/v1.1.0...v1.1.1) (2022-11-23)
 
 
