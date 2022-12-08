@@ -2,11 +2,18 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-if (!process.env.CRYPTO_KEY) {
-  throw new Error('Need CRYPTO_KEY');
+export const config = Object.freeze({
+  PORT: process.env.PORT || 3000,
+  CRYPTO_KEY: process.env.CRYPTO_KEY as string,
+  PG_CONNECTION: process.env.PG_CONNECTION as string,
+});
+
+function checkObjectNoEmpty(o: Record<string, any>): void {
+  for (const key in o) {
+    if (!o[key]) {
+      throw new Error(`Config value ${key} is empty!`);
+    }
+  }
 }
 
-export const config = {
-  PORT: process.env.PORT || 3000,
-  CRYPTO_KEY: process.env.CRYPTO_KEY,
-};
+checkObjectNoEmpty(config);
