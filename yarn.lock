@@ -2,28 +2,28 @@
 # yarn lockfile v1
 
 
-"@2ppl/boilerplate-schema@^1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@2ppl/boilerplate-schema/1.0.0/f2eb427a11eb73762061c88a5319076b4c542aa8#f2eb427a11eb73762061c88a5319076b4c542aa8"
-  integrity sha512-iM7xgJZDlC7mf93XYevyp9wM45iSyIdttn4UQ9ahn6n56GyLetq0Hc8ntt6z6PY5/pfWiS6Sat/bHzNCKnfnXQ==
+"@2ppl/boilerplate-schema@^1.0.3":
+  version "1.0.3"
+  resolved "https://npm.pkg.github.com/download/@2ppl/boilerplate-schema/1.0.3/50219ea814260798341cfed0d0fb41a3a8c03d4c#50219ea814260798341cfed0d0fb41a3a8c03d4c"
+  integrity sha512-sPrcJfPdjDaIffpINas8FcYE04jIQdiGsRaPzhZSeYd2ULPZpdiPnBMZGOzlvA4ZJ4ebMZerlQn3nl/kbPrHuQ==
   dependencies:
-    "@2ppl/core" "^1.0.2"
+    "@2ppl/core" "^1.1.0"
     "@sinclair/typebox" "^0.25.8"
 
-"@2ppl/core@^1.0.2":
-  version "1.0.2"
-  resolved "https://npm.pkg.github.com/download/@2ppl/core/1.0.2/ad9294669453d7d9783978e8b4492fcedf021066#ad9294669453d7d9783978e8b4492fcedf021066"
-  integrity sha512-uv/YsaWnGRbFidcqOXMiqugPVhoqcEFG0upcMQCOf0RGn3anZs/5hy4VXJYVm9tUZPre6w0s08E9Tjt02/Y9cw==
+"@2ppl/core@^1.1.0":
+  version "1.1.0"
+  resolved "https://npm.pkg.github.com/download/@2ppl/core/1.1.0/7ec9ac4f686460249268863fb8751e75bcd4bff4#7ec9ac4f686460249268863fb8751e75bcd4bff4"
+  integrity sha512-5I4e8+LDeRHPuGXCfrFvM8Q150zFe+sH883x3iWDWnDcxvucHwfrP8sShVqyZNTFYv8Hjsug3WqoA4IhZaEBoA==
   dependencies:
     "@sinclair/typebox" "^0.25.8"
     axios "^0.27.2"
 
-"@2ppl/server@^2.2.1":
-  version "2.2.1"
-  resolved "https://npm.pkg.github.com/download/@2ppl/server/2.2.1/98816c46558bdfa9c9a1b408cf3b6d06e4dc611f#98816c46558bdfa9c9a1b408cf3b6d06e4dc611f"
-  integrity sha512-Foe6h2fvxsJr37rdAhCUR/T0nMitms2+WSooFwFNQ5pjj0O6jLm5rp0wbzKyVcxiZNEgvIbXWxwcgW3rGwPc+Q==
+"@2ppl/server@^2.3.3":
+  version "2.3.3"
+  resolved "https://npm.pkg.github.com/download/@2ppl/server/2.3.3/812215b5874b6737cbd82bec9c2d76f66d737538#812215b5874b6737cbd82bec9c2d76f66d737538"
+  integrity sha512-43pcUIbxkpOBn5iS9o5aodq0/Et7f32W5e6PwQ2Q8Tnc9vmwcata/VHZvl192Hv8s3oUgMM3GYZuDDfXvI3nWQ==
   dependencies:
-    "@2ppl/core" "^1.0.2"
+    "@2ppl/core" "^1.1.0"
     fastify "^4.10.0"
     knex "^2.3.0"
     objection "^3.0.1"

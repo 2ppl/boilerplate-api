@@ -11,7 +11,7 @@ import * as Api from '~/api';
 declare module 'fastify' {
   export interface FastifyRequest {
     bearerToken?: string;
-    currentSession?: Session.ListedEntity;
+    currentSession?: Session.EntityCrudType['singleEntity'];
   }
 }
 
@@ -23,7 +23,7 @@ const fastify: FastifyInstance = Fastify({
 
 const knex = Knex({
   client: 'pg',
-  useNullAsDefault: true,
+  useNullAsDefault: false,
   connection: config.PG_CONNECTION,
 });
 

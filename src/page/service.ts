@@ -1,11 +1,7 @@
-import { CrudFastifyService } from '@2ppl/server/crud';
+import { FastifyCrudService, OrmCrudRepository } from '@2ppl/server/crud';
 import { Page } from '@2ppl/boilerplate-schema';
+import { Model } from './model';
 
-export class Service extends CrudFastifyService<Page.EntityCrudType> implements Page.Service {
-  async findAll() {
-    return {
-      total: 5,
-      list: [],
-    };
-  }
+export class Service extends FastifyCrudService<Page.EntityCrudType> implements Page.Service {
+  protected repository = new OrmCrudRepository(Model);
 }

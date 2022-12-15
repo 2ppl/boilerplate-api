@@ -1,10 +1,10 @@
-import { CrudFastifyService } from '@2ppl/server/crud';
+import { FastifyCrudService } from '@2ppl/server/crud';
 import { Session } from '@2ppl/boilerplate-schema';
 import { FastifyError } from '@2ppl/server/api';
 import { useUserService } from '~/user';
 import { useSessionRepository } from './di';
 
-export class Service extends CrudFastifyService<Session.EntityCrudType> implements Session.Service {
+export class Service extends FastifyCrudService<Session.EntityCrudType> implements Session.Service {
   protected repository = useSessionRepository();
 
   private userService = useUserService();
@@ -57,9 +57,9 @@ export class Service extends CrudFastifyService<Session.EntityCrudType> implemen
   async findActiveSession(accessToken: string): Promise<Session.SingleEntity> {
     const entity = await this.findOneByAccessToken(accessToken);
 
-    if (entity.accessTokenExpiredAt < Number(new Date())) {
-      throw new FastifyError('No Active Session', 404);
-    }
+    // if (entity.accessTokenExpiredAt < Number(new Date())) {
+    //   throw new FastifyError('No Active Session', 404);
+    // }
 
     return entity;
   }

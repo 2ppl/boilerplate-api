@@ -1,4 +1,7 @@
-export class Model {
+import { Knex } from 'knex';
+import { Model as M } from 'objection';
+
+export class Model extends M {
   static tableName = 'pages';
 
   // static relationMappings = {
