@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/2ppl/boilerplate-api/compare/v1.2.0...v1.3.0) (2022-12-15)
+
+
+### Features
+
+* page ([da19717](https://github.com/2ppl/boilerplate-api/commit/da19717ffc341d96ee4d78fec0d3986bdcd8ea08))
+
 # [1.2.0](https://github.com/2ppl/boilerplate-api/compare/v1.1.1...v1.2.0) (2022-12-08)
 
 
