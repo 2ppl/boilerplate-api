@@ -1,3 +1,11 @@
+## [1.3.1](https://github.com/2ppl/boilerplate-api/compare/v1.3.0...v1.3.1) (2023-02-05)
+
+
+### Bug Fixes
+
+* test guard ([233498c](https://github.com/2ppl/boilerplate-api/commit/233498ca7dfbd0a4478c6708996b834f3914d16b))
+* update 2ppl/server ([702a2d2](https://github.com/2ppl/boilerplate-api/commit/702a2d2d4e2a6a6282a87de334e372520ce1b9e5))
+
 # [1.3.0](https://github.com/2ppl/boilerplate-api/compare/v1.2.0...v1.3.0) (2022-12-15)
 
 
