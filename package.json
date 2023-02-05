@@ -29,6 +29,8 @@
     "@2ppl/boilerplate-schema": "^1.0.3",
     "@2ppl/core": "^1.1.0",
     "@2ppl/server": "^2.4.0",
+    "@fastify/bearer-auth": "^9.0.0",
+    "@sinclair/typebox": "^0.25.21",
     "crypto-js": "^4.1.1",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",

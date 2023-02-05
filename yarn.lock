@@ -47,6 +47,13 @@
     ajv-formats "^2.1.1"
     fast-uri "^2.0.0"
 
+"@fastify/bearer-auth@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@fastify/bearer-auth/-/bearer-auth-9.0.0.tgz#9a75abcb1d54751dc04e97b37db5363e325c0f90"
+  integrity sha512-I1egwg1LRdIvhjL/P+3UEfyK7A3YTnN3goTyf8MJ+v7vVkwyyd8ieccFKI0SzEuxMmfQh/p4yNyLZWcMVwpInA==
+  dependencies:
+    fastify-plugin "^4.0.0"
+
 "@fastify/deepmerge@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@fastify/deepmerge/-/deepmerge-1.1.0.tgz#91f0a5a27034ff76b7bece63a5906894940ace82"
@@ -63,6 +70,11 @@
   integrity sha512-cTKBV2J9+u6VaKDhX7HepSfPSzw+F+TSd+k0wzifj4rG+4E5PjSFJCk19P8R6tr/72cuzgGd+mbB3jFT6lvAgw==
   dependencies:
     fast-json-stringify "^5.0.0"
+
+"@sinclair/typebox@^0.25.21":
+  version "0.25.21"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.21.tgz#763b05a4b472c93a8db29b2c3e359d55b29ce272"
+  integrity sha512-gFukHN4t8K4+wVC+ECqeqwzBDeFeTzBXroBTqE6vcWrQGbEUpHO7LYdG0f4xnvYq4VOEwITSlHlp0JBAIFMS/g==
 
 "@sinclair/typebox@^0.25.8":
   version "0.25.8"
@@ -416,6 +428,11 @@ fast-uri@^2.0.0, fast-uri@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-2.1.0.tgz#9279432d6b53675c90116b947ed2bbba582d6fb5"
   integrity sha512-qKRta6N7BWEFVlyonVY/V+BMLgFqktCUV0QjT259ekAIlbVrMaFnFLxJ4s/JPl4tou56S1BzPufI60bLe29fHA==
+
+fastify-plugin@^4.0.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.5.0.tgz#8b853923a0bba6ab6921bb8f35b81224e6988d91"
+  integrity sha512-79ak0JxddO0utAXAQ5ccKhvs6vX2MGyHHMMsmZkBANrq3hXc1CHzvNPHOcvTsVMEPl5I+NT+RO4YKMGehOfSIg==
 
 fastify@^4.10.0, fastify@^4.10.2:
   version "4.10.2"

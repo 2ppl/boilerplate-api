@@ -3,16 +3,18 @@ import qs from 'qs';
 import Knex from 'knex';
 import { Model } from 'objection';
 import { App } from '@2ppl/server/app';
-import { Session } from '@2ppl/boilerplate-schema';
+import { Session as SessionSchema } from '@2ppl/boilerplate-schema';
 import { config } from '~/config';
 import { registerDependencies } from '~/dependencies';
 import * as Api from '~/api';
 import * as Page from '~/page';
+import * as Session from '~/session';
+import fastifyBearerAuth from '@fastify/bearer-auth';
 
 declare module 'fastify' {
   export interface FastifyRequest {
     bearerToken?: string;
-    currentSession?: Session.EntityCrudType['singleEntity'];
+    currentSession?: SessionSchema.EntityCrudType['singleEntity'];
   }
 }
 
@@ -20,6 +22,20 @@ registerDependencies();
 
 const fastify: FastifyInstance = Fastify({
   querystringParser: (str) => qs.parse(str),
+});
+
+const keys = new Set(['a-super-secret-key', 'another-super-secret-key']);
+
+fastify.register(fastifyBearerAuth, {
+  keys,
+  auth: (a) => {
+    console.log('a', a);
+    return true;
+  },
+});
+
+fastify.get('/foo', (req, reply) => {
+  reply.send({ authenticated: true });
 });
 
 const knex = Knex({
@@ -44,6 +60,7 @@ async function start(): Promise<void> {
     modules: [
       Api.module.with([
         Page.module,
+        Session.module,
       ]),
     ],
   });
