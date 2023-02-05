@@ -7,6 +7,7 @@ import { Session } from '@2ppl/boilerplate-schema';
 import { config } from '~/config';
 import { registerDependencies } from '~/dependencies';
 import * as Api from '~/api';
+import * as Page from '~/page';
 
 declare module 'fastify' {
   export interface FastifyRequest {
@@ -41,7 +42,9 @@ async function start(): Promise<void> {
     fastify,
     knex,
     modules: [
-      Api.module,
+      Api.module.with([
+        Page.module,
+      ]),
     ],
   });
 

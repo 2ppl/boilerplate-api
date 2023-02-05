@@ -28,7 +28,7 @@
   "dependencies": {
     "@2ppl/boilerplate-schema": "^1.0.3",
     "@2ppl/core": "^1.1.0",
-    "@2ppl/server": "^2.3.3",
+    "@2ppl/server": "^2.4.0",
     "crypto-js": "^4.1.1",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",

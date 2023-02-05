@@ -4,7 +4,7 @@ import { plugin } from './plugin';
 
 export const module = new AppModule('api', {
   plugin,
-  modules: [
-    Page.module,
-  ],
+  // modules: [
+  //   Page.module,
+  // ],
 });

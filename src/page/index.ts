@@ -3,4 +3,5 @@ export * from './migrations';
 export * from './model';
 export * from './module';
 export * from './plugin';
+export * from './repository';
 export * from './service';

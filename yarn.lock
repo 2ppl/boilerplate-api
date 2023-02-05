@@ -18,10 +18,10 @@
     "@sinclair/typebox" "^0.25.8"
     axios "^0.27.2"
 
-"@2ppl/server@^2.3.3":
-  version "2.3.3"
-  resolved "https://npm.pkg.github.com/download/@2ppl/server/2.3.3/812215b5874b6737cbd82bec9c2d76f66d737538#812215b5874b6737cbd82bec9c2d76f66d737538"
-  integrity sha512-43pcUIbxkpOBn5iS9o5aodq0/Et7f32W5e6PwQ2Q8Tnc9vmwcata/VHZvl192Hv8s3oUgMM3GYZuDDfXvI3nWQ==
+"@2ppl/server@^2.4.0":
+  version "2.4.0"
+  resolved "https://npm.pkg.github.com/download/@2ppl/server/2.4.0/97d84f8b88d16b8938a1f5c4f8857b8b74edc6cf#97d84f8b88d16b8938a1f5c4f8857b8b74edc6cf"
+  integrity sha512-evM4rK+JsbA0mMFul1SU6DhPTnUsjdUb2kCddbvhgQCTyQ3I9RX+qdDtnXZdErTRfQxXk0U1SSArQ2joT7Io9A==
   dependencies:
     "@2ppl/core" "^1.1.0"
     fastify "^4.10.0"
